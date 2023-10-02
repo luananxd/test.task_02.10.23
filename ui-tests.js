@@ -27,8 +27,8 @@ async function testNumberOne (firstValue, secondValue, pendingResult) {
   SUBMIT_BUTTON.click();
   let result = await RESULT_FIELD.getAttribute('value');
 
-  (+result === pendingResult) ? console.log('Тест #1 пройден') : console.log('Тест #1 не пройден')
   driver.close();
+  (+result === pendingResult) ? console.log('Тест #1 пройден') : console.log('Тест #1 не пройден');
 }
 
 async function testNumberTwo (firstValue, secondValue, pendingResult) {
@@ -54,8 +54,8 @@ async function testNumberTwo (firstValue, secondValue, pendingResult) {
   SUBMIT_BUTTON.click();
   let result = await RESULT_FIELD.getAttribute('value');
 
-  (result === pendingResult) ? console.log('Тест #2 пройден') : console.log('Тест #2 не пройден')
   driver.close();
+  (result === pendingResult) ? console.log('Тест #2 пройден') : console.log('Тест #2 не пройден');
 }
 
 async function testNumberThree (inputValue) {
@@ -77,9 +77,8 @@ async function testNumberThree (inputValue) {
   const ERROR_LABEL = await driver.findElement(By.xpath('//*[@id="feedbackLabel"]'));
   let result = await ERROR_LABEL.isEnabled();
 
-  result ? console.log('Тест #3 пройден') : console.log('Тест #3 не пройден')
-
   driver.close();
+  result ? console.log('Тест #3 пройден') : console.log('Тест #3 не пройден');
 }
 
 // testNumberOne(2, 3, -1);

@@ -4,7 +4,8 @@
   "description": "",
   "main": "test.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ui": "node ui-tests.js"
   },
   "author": "luanan",
   "license": "ISC",
@@ -12,6 +13,7 @@
     "selenium-webdriver": "^4.13.0"
   },
   "devDependencies": {
-    "mocha": "^10.2.0"
+    "mocha": "^10.2.0",
+    "pactum": "^3.5.1"
   }
 }
